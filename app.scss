@@ -1,0 +1,7 @@
+@import "@material/button/mdc-button";
+@import "@material/select/mdc-select";
+
+.foo-button {
+  @include mdc-button-ink-color(teal);
+  @include mdc-states(teal);
+}
