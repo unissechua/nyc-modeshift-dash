@@ -1,7 +1,16 @@
 @import "@material/button/mdc-button";
 @import "@material/select/mdc-select";
 
+body { margin:0; padding:0; }
+
 .foo-button {
   @include mdc-button-ink-color(teal);
   @include mdc-states(teal);
+}
+
+#map { 
+	position:absolute;
+	top:0;
+	bottom:0;
+	width:100%;
 }
