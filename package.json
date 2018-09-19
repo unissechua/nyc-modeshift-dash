@@ -19,6 +19,7 @@
   "dependencies": {
     "@material/layout-grid": "^0.39.0",
     "@material/select": "^0.39.3",
+    "@material/typography": "^0.39.0",
     "npm": "^6.4.1"
   },
   "devDependencies": {

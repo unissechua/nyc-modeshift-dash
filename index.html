@@ -10,12 +10,14 @@
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
 	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
 
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
 	<link rel="stylesheet" href="bundle.css">
 
     <title>NYC Mode Shift Dashboard</title>
 </head>
-<body>
-	<div id='map' style='width: 100%; height: 100%;'></div>
+<body class="mdc-typography">
+	<div id='map' style='width: 100%; height: 70%;'></div>
 
 	<div id="selection" class="mdc-layout-grid">
 		<div class="mdc-layout-grid__inner">
@@ -71,6 +73,20 @@
 					</select>
 					<label class="mdc-floating-label">Feature</label>
 			  		<div class="mdc-line-ripple"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel">
+		<div class="mdc-layout-grid">
+			<div class="mdc-layout-grid__inner">
+				<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+					<p class="mdc-typography--subtitle2">Ridership Comparison</p>
+				</div>
+
+				<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+					<p class="mdc-typography--subtitle2">Normalized Ridership and Vx Comparison</p>
 				</div>
 			</div>
 		</div>

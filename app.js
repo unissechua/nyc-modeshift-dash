@@ -29,7 +29,10 @@ var popup = new mapboxgl.Popup({
 });
 
 map.on('load', function () {
-    map.addLayer({
+
+	console.log(map);
+
+	map.addLayer({
     	"id": "destination",
     	"type": "fill",
     	"source": {
@@ -38,19 +41,47 @@ map.on('load', function () {
     	},
     	"source-layer": "destinationVx",
     	"paint": {
-    		"fill-color": "#adadad"
+    		"fill-color": "#C9B79C"
     	}
-    })
+    });
+
+    map.addLayer({
+    	"id": "origin",
+    	"type": "fill",
+    	"source": {
+    		type: 'vector',
+    		url: 'mapbox://unissechua.23xv8rkk'
+    	},
+    	"source-layer": "originVx-1l6u35",
+    	"paint": {
+    		"fill-color": "#71816D"
+    	}
+    });
+
+    map.addLayer({
+    	"id": "base-zones",
+    	"type": "line",
+    	"source": {
+    		type: 'vector',
+    		url: 'mapbox://unissechua.cjm8o6zh91v9y32qvkt3hvx6c-579wh'
+    	},
+    	"source-layer": "nyctaxizones",
+    	"paint": {
+          'line-width': 1,
+          'line-color': '#ececec',
+        },
+    });
 });
 
 map.on('mouseenter', 'destination', function(e) {
     // Change the cursor style as a UI indicator.
     map.getCanvas().style.cursor = 'pointer';
 
+    var zone = e.features[0].properties.destination;
     var uberCost = e.features[0].properties.cost_uber;
     var uberTravelTime = e.features[0].properties.traveltime_uber;
 
-    var description = "<b>Uber Cost:</b> " + uberCost + "<br>" + "<b>Uber Travel Time:</b> " + uberTravelTime;
+    var description = "<b>Zone:</b> " + zone +"<br><b>Uber Cost:</b> " + uberCost + "<br>" + "<b>Uber Travel Time:</b> " + uberTravelTime;
 
     // var coordinates = e.features[0].geometry.coordinates.slice();
     // var description = e.features[0].properties.description;

@@ -1,7 +1,11 @@
 @import "@material/button/mdc-button";
 @import "@material/select/mdc-select";
+@import "@material/typography/mdc-typography";
 
-body { margin:0; padding:0; }
+body { 
+	margin:0; 
+	padding:0;
+}
 
 .foo-button {
   @include mdc-button-ink-color(teal);
@@ -28,4 +32,11 @@ body { margin:0; padding:0; }
 .mapboxgl-popup {
     max-width: 400px;
     font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.panel {
+	height: 30%;
+	width: 100%;
+	top: 70%;
+	position: fixed;
 }
