@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/unissechua/nyc-modeshift-dash#readme",
   "dependencies": {
+    "@material/layout-grid": "^0.39.0",
     "@material/select": "^0.39.3",
     "npm": "^6.4.1"
   },

@@ -4,7 +4,9 @@ import {MDCSelect} from '@material/select';
 // const ripple = new MDCRipple(document.querySelector('.foo-button'));
 
 
-// const select = new MDCSelect(document.querySelector('.mdc-select'));
+const origin = new MDCSelect(document.querySelector('#origin-select'));
+const destination = new MDCSelect(document.querySelector('#destination-select'));
+const feature = new MDCSelect(document.querySelector('#feature-select'));
 // select.listen('change', () => {
 //   alert(`Selected option at index ${select.selectedIndex} with value "${select.value}"`);
 // });
@@ -16,4 +18,58 @@ var map = new mapboxgl.Map({
     style: 'mapbox://styles/mapbox/light-v9',
     center: [-73.98, 40.75],
     zoom: 11
+});
+
+map.addControl(new mapboxgl.NavigationControl());
+
+// Create a popup, but don't add it to the map yet.
+var popup = new mapboxgl.Popup({
+    closeButton: false,
+    closeOnClick: false
+});
+
+map.on('load', function () {
+    map.addLayer({
+    	"id": "destination",
+    	"type": "fill",
+    	"source": {
+    		type: 'vector',
+    		url: 'mapbox://unissechua.cjm8lrxyc16x12wqp09anuos3-907i0'
+    	},
+    	"source-layer": "destinationVx",
+    	"paint": {
+    		"fill-color": "#adadad"
+    	}
+    })
+});
+
+map.on('mouseenter', 'destination', function(e) {
+    // Change the cursor style as a UI indicator.
+    map.getCanvas().style.cursor = 'pointer';
+
+    var uberCost = e.features[0].properties.cost_uber;
+    var uberTravelTime = e.features[0].properties.traveltime_uber;
+
+    var description = "<b>Uber Cost:</b> " + uberCost + "<br>" + "<b>Uber Travel Time:</b> " + uberTravelTime;
+
+    // var coordinates = e.features[0].geometry.coordinates.slice();
+    // var description = e.features[0].properties.description;
+
+    // // Ensure that if the map is zoomed out such that multiple
+    // // copies of the feature are visible, the popup appears
+    // // over the copy being pointed to.
+    // while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+    //     coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+    // }
+
+    // // Populate the popup and set its coordinates
+    // // based on the feature found.
+    popup.setLngLat(e.lngLat)
+        .setHTML(description)
+        .addTo(map);
+});
+
+map.on('mouseleave', 'destination', function() {
+    map.getCanvas().style.cursor = '';
+    popup.remove();
 });

@@ -16,6 +16,66 @@
 </head>
 <body>
 	<div id='map' style='width: 100%; height: 100%;'></div>
+
+	<div id="selection" class="mdc-layout-grid">
+		<div class="mdc-layout-grid__inner">
+			<div class="mdc-layout-grid__cell">
+				<div id="origin-select" class="mdc-select mdc-select--box">
+					<select class="mdc-select__native-control">
+						<option value="" disabled selected></option>
+						<option value="grains">
+							Bread, Cereal, Rice, and Pasta
+						</option>
+						<option value="vegetables">
+							Vegetables
+						</option>
+						<option value="fruit">
+							Fruit
+						</option>
+					</select>
+					<label class="mdc-floating-label">Origin</label>
+			  		<div class="mdc-line-ripple"></div>
+				</div>
+			</div>
+			<div class="mdc-layout-grid__cell">
+				<div id="destination-select" class="mdc-select mdc-select--box">
+					<select class="mdc-select__native-control">
+						<option value="" disabled selected></option>
+						<option value="grains">
+							Bread, Cereal, Rice, and Pasta
+						</option>
+						<option value="vegetables">
+							Vegetables
+						</option>
+						<option value="fruit">
+							Fruit
+						</option>
+					</select>
+					<label class="mdc-floating-label">Destination</label>
+			  		<div class="mdc-line-ripple"></div>
+				</div>
+			</div>
+			<div class="mdc-layout-grid__cell">
+				<div id="feature-select" class="mdc-select mdc-select--box">
+					<select class="mdc-select__native-control">
+						<option value="" disabled selected></option>
+						<option value="grains">
+							Bread, Cereal, Rice, and Pasta
+						</option>
+						<option value="vegetables">
+							Vegetables
+						</option>
+						<option value="fruit">
+							Fruit
+						</option>
+					</select>
+					<label class="mdc-floating-label">Feature</label>
+			  		<div class="mdc-line-ripple"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 	<script src="bundle.js" async></script>
 </body>
 </html>

@@ -14,3 +14,18 @@ body { margin:0; padding:0; }
 	bottom:0;
 	width:100%;
 }
+
+#selection {
+	position: absolute;
+	top: 10px;
+	left: 20px;
+}
+
+.mdc-layout-grid__cell {
+	padding: 8px;
+}
+
+.mapboxgl-popup {
+    max-width: 400px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
