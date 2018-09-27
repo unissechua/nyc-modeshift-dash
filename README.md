@@ -8,12 +8,15 @@ An interactive dashboard to visualize the results of the capstone project: Predi
 * Unisse Chua
 * Andrew Nell
 
-### Dependency
-Node.js and npm ([Reference](https://www.npmjs.com/get-npm))
+### Requirements
+1. Git
+2. [Node.js](https://www.npmjs.com/get-npm)
+3. [Webpack](https://webpack.js.org/)
 
 ### Local Setup
 To get a version of the web app running locally:
-1. Clone this repository
-2. Run `npm install`
-3. To run the development server, use `npm start` 
-	* Navigate to `localhost:8080` in the browser to view the app
+1. Clone this repository: `git clone https://github.com/unissechua/nyc-modeshift-dash.git`
+2. Navigate to the repository: `cd nyc-modeshift-dash`
+3. Install the dependencies: `npm install`
+4. Run the development server: `npm run start`
+	* Navigate to `http:\\localhost:8080` in the browser to view the app
