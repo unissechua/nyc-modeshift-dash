@@ -3,6 +3,7 @@ import { withTheme } from '@material-ui/core/styles';
 import NavBar from './NavBar';
 import Map from './Map';
 import Legend from './Legend';
+import Panel from './Panel';
 
 const App = (props) => {
   return (
@@ -10,6 +11,7 @@ const App = (props) => {
       <NavBar />
       <Map />
       <Legend />
+      <Panel />
     </div>
   );
 }

@@ -2,6 +2,7 @@ const path = require('path');
 const resolve = require('path').resolve;
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 const ROOT_DIR = path.resolve(__dirname);
 
@@ -81,7 +82,7 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: {
-              presets: ['react']
+              presets: ['react', 'stage-2']
             }
           }
         ],
@@ -103,6 +104,12 @@ module.exports = {
     htmlPlugin,
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': '"production"'
-    })
+    }),
+    new CopyWebpackPlugin([
+      {
+        from: 'data',
+        to: 'data',
+      },
+    ])
   ]
 }
