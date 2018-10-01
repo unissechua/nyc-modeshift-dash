@@ -23,9 +23,6 @@ const styles = theme => ({
     padding: '8px 28px 8px 16px',
     width: '200px',
   },
-  sliderStyle: {
-    margin: '0 -4px',
-  },
   textField: {
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
@@ -51,7 +48,7 @@ class Filters extends React.Component {
       <div className={classes.positionStyle}>
         <Paper className={classes.paperStyle}>
           <TextField
-            id="od"
+            id="select"
             select
             label="Origin / Destination"
             className={classes.textField}

@@ -12,8 +12,8 @@ class App extends React.Component {
 
     this.state = {
       select: 'origin',
-      zone: null,
-      feature: null,
+      zone: '',
+      feature: '',
     };
 
     this.handleSelectChange = this.handleSelectChange.bind(this);
@@ -54,7 +54,7 @@ class App extends React.Component {
           zone={zone}
           feature={feature}
           handleSelectChange={this.handleSelectChange}
-          handleZoneChange={this.handleFeatureChange}
+          handleZoneChange={this.handleZoneChange}
           handleFeatureChange={this.handleFeatureChange}
         />
         <Legend feature={feature} />
