@@ -3,4 +3,86 @@ const colors = [
   '#31a354', '#006837'
 ];
 
-export { colors };
+const origins = ['Alphabet City', 'Astoria', 'Astoria Park', 'Bay Ridge', 'Bayside',
+       'Bedford', 'Bensonhurst East', 'Bensonhurst West',
+       'Bloomfield/Emerson Hill', 'Bloomingdale', 'Borough Park',
+       'Briarwood/Jamaica Hills', 'Brooklyn Heights', 'Brownsville',
+       'Bushwick North', 'Bushwick South', 'Canarsie', 'Central Harlem',
+       'Central Harlem North', 'Clinton East', 'Clinton Hill',
+       'Clinton West', 'Co-Op City', 'Coney Island', 'Corona',
+       'Crown Heights North', 'Crown Heights South', 'Cypress Hills',
+       'Dyker Heights', 'East Chelsea',
+       'East Concourse/Concourse Village', 'East Flatbush/Farragut',
+       'East Flatbush/Remsen Village', 'East Flushing',
+       'East Harlem North', 'East Harlem South', 'East New York',
+       'East Village', 'East Williamsburg', 'Elmhurst',
+       "Eltingville/Annadale/Prince's Bay", 'Financial District North',
+       'Flatbush/Ditmas Park', 'Flatiron', 'Flatlands', 'Flushing',
+       'Forest Hills', 'Fort Greene', 'Glendale', 'Gramercy',
+       'Great Kills', 'Greenpoint', 'Greenwich Village North',
+       'Hamilton Heights', 'Hammels/Arverne',
+       'Heartland Village/Todt Hill', 'Homecrest', 'Jackson Heights',
+       'Kensington', 'Kips Bay', 'Lenox Hill East', 'Lenox Hill West',
+       'Lincoln Square East', 'Lincoln Square West',
+       'Long Island City/Hunters Point', 'Lower East Side', 'Madison',
+       'Manhattan Valley', 'Marine Park/Mill Basin', 'Mariners Harbor',
+       'Middle Village', 'Midwood', 'Mott Haven/Port Morris',
+       'Mount Hope', 'Murray Hill', 'Murray Hill-Queens', 'North Corona',
+       'Ocean Hill', 'Ocean Parkway South', 'Old Astoria', 'Park Slope',
+       'Pelham Parkway', 'Prospect Heights', 'Prospect-Lefferts Gardens',
+       'Queens Village', 'Queensboro Hill', 'Rego Park', 'Richmond Hill',
+       'Ridgewood', 'Saint Albans', 'Saint George/New Brighton',
+       'Sheepshead Bay', 'Soundview/Castle Hill', 'South Ozone Park',
+       'South Williamsburg', 'Stapleton', 'Steinway',
+       'Stuy Town/Peter Cooper Village', 'Stuyvesant Heights',
+       'Sunnyside', 'Sunset Park East', 'Sunset Park West',
+       'Sutton Place/Turtle Bay North', 'TriBeCa/Civic Center',
+       'Two Bridges/Seward Park', 'UN/Turtle Bay South', 'Union Sq',
+       'University Heights/Morris Heights', 'Upper East Side North',
+       'Upper East Side South', 'Upper West Side North',
+       'Upper West Side South', 'Van Cortlandt Village',
+       'Washington Heights North', 'Washington Heights South',
+       'West Village', 'Westerleigh', 'Willets Point',
+       'Williamsbridge/Olinville', 'Williamsburg (North Side)',
+       'Williamsburg (South Side)', 'Woodhaven', 'Woodside',
+       'Yorkville East', 'Yorkville West'];
+
+const destinations = ['Bay Ridge', 'Bedford', 'Bensonhurst East', 'Bensonhurst West',
+       'Bloomfield/Emerson Hill', 'Borough Park', 'Bushwick North',
+       'Clinton East', 'Downtown Brooklyn/MetroTech', 'Dyker Heights',
+       'East Chelsea', 'East Harlem South', 'East Williamsburg',
+       'Far Rockaway', 'Financial District North',
+       'Financial District South', 'Flushing', 'Garment District',
+       'Hudson Sq', 'JFK Airport', 'Jamaica', 'Lenox Hill East',
+       'Lincoln Square East', 'Little Italy/NoLiTa',
+       'Long Island City/Hunters Point', 'Midtown Center', 'Midtown East',
+       'Midtown North', 'Midtown South', 'Midwood', 'Morningside Heights',
+       'Murray Hill', 'Norwood', 'Park Slope',
+       'Penn Station/Madison Sq West', 'Prospect-Lefferts Gardens',
+       'Richmond Hill', 'South Williamsburg', 'Sunnyside',
+       'Sunset Park East', 'Sunset Park West',
+       'Times Sq/Theatre District', 'TriBeCa/Civic Center',
+       'UN/Turtle Bay South', 'Union Sq', 'Upper East Side South',
+       'Van Nest/Morris Park', 'Washington Heights South',
+       'Williamsburg (South Side)'];
+
+const features = [
+  {
+    value: 'vx',
+    label: 'Value Experience (Vx)',
+  },
+  {
+    value: 'mta-time',
+    label: 'Travel Time (MTA)',
+  },
+  {
+    value: 'uber-time',
+    label: 'Travel Time (Uber)',
+  },
+  {
+    value: 'uber-cost',
+    label: 'Cost (Uber)',
+  },
+];
+
+export { colors, origins, destinations, features };
