@@ -12,7 +12,7 @@ class App extends React.Component {
 
     this.state = {
       select: 'origin',
-      zone: '',
+      zone: 'all',
       feature: '',
     };
 

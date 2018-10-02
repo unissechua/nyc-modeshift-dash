@@ -43,6 +43,13 @@ class Filters extends React.Component {
     const { classes, select, zone, feature,
       handleSelectChange, handleZoneChange,
       handleFeatureChange } = this.props;
+    let zoneSelect;
+
+    if (select === 'origin') {
+      zoneSelect = origins;
+    } else {
+      zoneSelect = destinations;
+    }
 
     return (
       <div className={classes.positionStyle}>
@@ -82,10 +89,12 @@ class Filters extends React.Component {
                 className: classes.menu,
               },
             }}
-            // helperText="Select the zone"
             margin="normal"
           >
-            {origins.map(option => (
+            <MenuItem key="all" value="all">
+              {`All ${select} zones`}
+            </MenuItem>
+            {zoneSelect.map(option => (
               <MenuItem key={option} value={option}>
                 {option}
               </MenuItem>
@@ -104,7 +113,6 @@ class Filters extends React.Component {
                 className: classes.menu,
               },
             }}
-            // helperText="Select the zone"
             margin="normal"
           >
             {features.map(option => (
